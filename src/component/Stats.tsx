@@ -38,7 +38,7 @@ const stats: Stat[] = [
     color: 'from-emerald-500 to-emerald-600'
   },
   {
-    id: '4',
+    id: '9',
     icon: <FaGraduationCap size={36} />,
     value: 4,
     suffix: ' Daaras',

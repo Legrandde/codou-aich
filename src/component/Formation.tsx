@@ -22,7 +22,7 @@ const educations: Education[] = [
   },
   {
     id: '2',
-    degree: 'Spécialisation en Médiation',
+    degree: 'Spécialisation en Médiation (en cours)',
     institution: 'Dialogue Social & Règlement des Conflits',
     period: 'Formation Supérieure',
     description: "Compétences clés en médiation, négociation institutionnelle et résolution pacifique des différends au service du collectif.",

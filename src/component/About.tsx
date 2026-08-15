@@ -28,7 +28,7 @@ export default function About(){
                     <p className={`text-base leading-relaxed ${
                         theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                     }`}>
-                        Je suis une professionnelle engagée, une femme de convictions et une voix citoyenne. Je me définis avant tout par les causes que je choisis de défendre : la cause des femmes, l’éducation, la santé, la protection de l’enfance et la défense des personnes les plus vulnérables.
+                        Je suis une voix citoyenne, une femme de convictions et une voix citoyenne. Je me définis avant tout par les causes que je choisis de défendre : la cause des femmes, l’éducation, la santé, la protection de l’enfance et la défense des personnes les plus vulnérables.
                     </p>
                     <p className={`text-base leading-relaxed ${
                         theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
