@@ -21,25 +21,25 @@ const testimonials: Testimonial[] = [
     company: 'TechStart Inc.',
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150',
     rating: 5,
-    text: 'Travail exceptionnel ! Barry a su transformer notre vision en réalité. Son professionnalisme et sa créativité ont dépassé nos attentes. Je recommande vivement ses services.'
+    text: 'Une vision inspirante et un leadership remarquable. Codou Aïcha met la technologie et l\'innovation au service de l\'éducation au Sénégal avec une détermination constante.'
   },
   {
     id: '2',
     name: 'Jean Martin',
-    role: 'Directeur Technique',
-    company: 'Digital Solutions',
+    role: 'Partenaire Éducatif',
+    company: 'Mastercard Foundation',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150',
     rating: 5,
-    text: 'Un développeur talentueux et fiable. Les projets sont toujours livrés dans les temps avec un code de qualité. Collaboration excellente et communication claire.'
+    text: 'Un engagement sincère pour l\'inclusion et l\'autonomisation des jeunes vulnérables. Les résultats du programme Tàggat Ma témoignent d\'un impact concret sur le terrain.'
   },
   {
     id: '3',
     name: 'Sophie Laurent',
-    role: 'Product Manager',
-    company: 'InnovateLab',
+    role: 'Coordonnatrice Projets',
+    company: 'EtriLabs',
     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150',
     rating: 5,
-    text: 'Barry comprend rapidement les besoins et propose des solutions innovantes. Son expertise technique et son approche méthodique font de lui un partenaire idéal.'
+    text: 'Codou Aïcha incarne l\'excellence et le leadership de la communauté EdTech en Afrique. Sa participation au Fellowship illustre son ambition pour le continent.'
   },
   {
     id: '4',

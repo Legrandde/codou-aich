@@ -77,36 +77,42 @@ export default function Contact() {
                         theme === "dark" ? "text-white" : "text-gray-900"
                     }`}
                 >
-                    Travaillons ensemble
+                    Prenez contact
                 </h2>
                 <p
                     className={`text-lg max-w-2xl mx-auto ${
                         theme === "dark" ? "text-gray-400" : "text-gray-600"
                     }`}
                 >
-                    Discutons de votre projet et créons quelque chose d'extraordinaire
+                    Pour toute sollicitation, projet éducatif, initiative d'inclusion ou prise de parole publique.
                 </p>
             </div>
 
             <div
-                className={`flex p-6 justify-center m-auto w-full md:w-[80%] flex-col md:flex-row rounded transition-all ${
+                className={`flex p-6 justify-center m-auto w-full md:w-[80%] flex-col md:flex-row rounded-2xl transition-all ${
                     theme === "dark"
                         ? "bg-gray-800/50 border border-gray-700/50"
-                        : "bg-white border border-gray-200"
+                        : "bg-white border border-gray-200 shadow-lg"
                 }`}
             >
-                <div className="flex p-4 flex-col gap-4">
-                    <div className={`flex self-start gap-6 ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
-                        <BiPhone className="text-amber-500" size={25} />
-                        <span>00224 626 01 45 52</span>
-                    </div>
-                    <div className={`flex self-start gap-6 ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
-                        <FaEnvelope className="text-amber-500" size={25} />
-                        <span>barryalhassane476@gmail.com</span>
-                    </div>
-                    <div className={`flex self-start gap-6 ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
-                        <CiLocationOn className="text-amber-500" size={25} />
-                        <span>Timbi Madina</span>
+                <div className="flex p-4 flex-col gap-6 justify-center">
+                    <a href="tel:+221776391186" className={`flex items-center gap-4 hover:text-amber-500 transition-colors ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
+                        <div className="p-3 rounded-full bg-amber-500/20 text-amber-500">
+                            <BiPhone size={22} />
+                        </div>
+                        <span className="font-medium">+221 77 639 11 86</span>
+                    </a>
+                    <a href="mailto:contact@ecolesausenegal.com" className={`flex items-center gap-4 hover:text-amber-500 transition-colors ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
+                        <div className="p-3 rounded-full bg-amber-500/20 text-amber-500">
+                            <FaEnvelope size={20} />
+                        </div>
+                        <span className="font-medium">contact@ecolesausenegal.com</span>
+                    </a>
+                    <div className={`flex items-center gap-4 ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
+                        <div className="p-3 rounded-full bg-amber-500/20 text-amber-500">
+                            <CiLocationOn size={24} />
+                        </div>
+                        <span className="font-medium">Dakar, Sénégal</span>
                     </div>
                 </div>
 

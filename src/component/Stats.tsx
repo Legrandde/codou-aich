@@ -1,7 +1,7 @@
 import { motion, useInView, type Variants } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
-import { FaProjectDiagram, FaUsers, FaAward } from 'react-icons/fa';
+import { FaUsers, FaBookOpen, FaBriefcase, FaGraduationCap } from 'react-icons/fa';
 
 interface Stat {
   id: string;
@@ -15,28 +15,35 @@ interface Stat {
 const stats: Stat[] = [
   {
     id: '1',
-    icon: <FaProjectDiagram size={40} />,
-    value: 10,
+    icon: <FaUsers size={36} />,
+    value: 1600000,
     suffix: '+',
-    label: 'Projets réalisés',
-    color: 'from-blue-500 to-blue-600'
+    label: 'Abonnés Écoles au Sénégal',
+    color: 'from-amber-500 to-amber-600'
   },
   {
     id: '2',
-    icon: <FaUsers size={40} />,
-    value: 10,
+    icon: <FaBookOpen size={36} />,
+    value: 8000,
     suffix: '+',
-    label: 'Clients satisfaits',
-    color: 'from-green-500 to-green-600'
+    label: 'Ressources pédagogiques STEM & Scolaires',
+    color: 'from-blue-500 to-blue-600'
   },
- 
   {
     id: '3',
-    icon: <FaAward size={40} />,
-    value: 2,
+    icon: <FaBriefcase size={36} />,
+    value: 10,
     suffix: '+',
-    label: 'Années d\'expérience',
-    color: 'from-amber-500 to-amber-600'
+    label: 'Années chez Orange & Leadership Institutionnel',
+    color: 'from-emerald-500 to-emerald-600'
+  },
+  {
+    id: '4',
+    icon: <FaGraduationCap size={36} />,
+    value: 4,
+    suffix: ' Daaras',
+    label: 'Partenaires majeurs du programme Tàggat Ma',
+    color: 'from-purple-500 to-purple-600'
   }
 ];
 
@@ -120,7 +127,7 @@ export default function Stats() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row justify-center md:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {stats.map((stat) => (
             <motion.div

@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
 import { FaArrowRight, FaEnvelope } from 'react-icons/fa';
-import { PhoneCall } from 'lucide-react';
 
 export default function CTA() {
   const { theme } = useTheme();
@@ -42,7 +41,7 @@ export default function CTA() {
               theme === 'dark' ? 'text-white' : 'text-gray-900'
             }`}
           >
-            Prêt à démarrer votre <span className="text-amber-500">projet</span> ?
+            Ensemble pour <span className="text-amber-500">l'Éducation</span> et l'Inclusion
           </motion.h2>
 
           <motion.p
@@ -54,7 +53,7 @@ export default function CTA() {
               theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
             }`}
           >
-            Discutons de votre projet et créons ensemble quelque chose d'extraordinaire
+            Mettre l'innovation technologique et l'action citoyenne au service de la transformation sociale au Sénégal et en Afrique.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -69,7 +68,7 @@ export default function CTA() {
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded transition-colors shadow-lg"
+              className="flex items-center gap-2 px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-full transition-colors shadow-lg"
             >
               <FaEnvelope />
               Me contacter
@@ -77,17 +76,19 @@ export default function CTA() {
             </motion.a>
 
             <motion.a
-              href="tel:+224626014552"
+              href="https://ecolesausenegal.com"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`flex items-center gap-2 px-8 py-4 border-2 border-amber-500 font-semibold rounded transition-colors ${
+              className={`flex items-center gap-2 px-8 py-4 border-2 border-amber-500 font-semibold rounded-full transition-colors ${
                 theme === 'dark'
                   ? 'bg-gray-800 text-white hover:bg-gray-700'
                   : 'bg-white text-amber-600 hover:bg-amber-50'
               }`}
             >
-              <PhoneCall />
-              Appeler maintenant
+              Écoles au Sénégal
+              <FaArrowRight />
             </motion.a>
           </motion.div>
 
@@ -101,10 +102,10 @@ export default function CTA() {
               theme === 'dark' ? 'border-gray-700' : 'border-gray-200'
             }`}
           >
-            <p className={`text-sm ${
+            <p className={`text-sm font-medium ${
               theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
             }`}>
-              Réponse garantie sous 24h • Consultation gratuite • Devis sans engagement
+              Écoles au Sénégal • Programme Tàggat Ma • Mastercard Foundation EdTech Fellow
             </p>
           </motion.div>
         </motion.div>

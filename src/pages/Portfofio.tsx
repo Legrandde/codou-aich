@@ -6,117 +6,20 @@ import Banner from "../component/Banner";
 import About from "../component/About";
 import Contact from "../component/Contact";
 import Footer from "../component/Footer";
-import Services from "../component/Services";
-import Skills from "../component/Skills";
+
 import Parcours from "../component/Parcours";
 import Formation from "../component/Formation";
 import Stats from "../component/Stats";
-import Process from "../component/Process";
+
 import CTA from "../component/CTA";
-import ProjectsSection from "../component/ProjectsSection";
-import ProjectModal from "../component/ProjectModal";
+import EngagementsSection from "../component/EngagementsSection";
 import { useTheme } from "../contexts/ThemeContext";
 import { BsWhatsapp } from "react-icons/bs";
+import Engagements from "../component/Engagement";
 
-export interface Project {
-  id: string;
-  title: string;
-  description: string;
-  mainImage: string;
-  images: string[];
-  type: 'web' | 'mobile' | 'desktop' | 'other';
-  liveUrl?: string;
-  demoUrl?: string;
-  technologies: string[];
-  category: string;
-}
-
-const projects: Project[] = [
- 
-  {
-    id: "1",
-    title: "Application Immobilier",
-    description: "Application web pour la gestion d'une agence immobilière avec accès locataires pour paiement en ligne et suivi des factures.",
-    mainImage: "classiqueImmo/banner.jpeg",
-    images: [
-      "classiqueImmo/1.jpeg",
-      "classiqueImmo/2.jpeg",
-    ],
-    type: "web",
-    technologies: ["PHP", "MySQL", "TailwindCSS", "Prometheus", "Grafana"],
-    category: "Web Development",
-  },
-  {
-    id: "2",
-    title: "Application mise en relation  agritulteurs consommateurs ",
-    description: "Application web pour optimiser les rendements agricoles en Guinée, gestion des parcelles, transport, stockage et conseils experts.",
-    mainImage: "leydi/realisation-1 cpie.png",
-    images: [
-      "leydi/ba.png",
-      "leydi/Sans titre-1-Récupéré.png",
-      "leydi/c.png",
-    ],
-    type: "mobile",
-    technologies: ["Django", "React Native", "PostgreSQL"],
-    category: "Web Development",
-  },
-  {
-    id: "3",
-    title: "Plateforme web de revision",
-    description: "Application web pourfaciliter la révision des eléves avec des exercices et corrigé et anciens sujets d'exament(bac, brevet et entrée en 7eme).",
-    mainImage: "Tely/image.png",
-    images: [
-      "Tely/im1.png",
-      "Tely/im2.png",
-      
-      
-    ],
-    type: "web",
-    technologies: ["React", "NestJS", "PostgreSQL", "TypeScript", "TailwindCSS"],
-    category: "Web Development",
-  },
-  {
-    id: "4",
-    title: "Application Desktop Gestion de Bibliothèque",
-    description: "Logiciel desktop pour gérer les livres, emprunts, retours et membres d'une bibliothèque.",
-    mainImage: "afrilib/banner.png",
-    images: [
-      "afrilib/1.png",
-      "afrilib/2.png",
-    ],
-    type: "desktop",
-    technologies: ["Java", "JavaSwing", "Mysql"],
-    category: "Desktop Application",
-  },
-  {
-    id: "5",
-    title: "Application Mobile Réservation Restaurant & Hôtel",
-    description: "Application mobile pour réserver des restaurants et hôtels avec paiement en ligne.",
-    mainImage: "guesthub/banner.png",
-    images: [
-      "https://res.cloudinary.com/alhassane-b/image/upload/v1680000000/reservation-1.png",
-      "https://res.cloudinary.com/alhassane-b/image/upload/v1680000000/reservation-2.png",
-    ],
-    type: "mobile",
-    technologies: ["React native", "Laravel"],
-    category: "Mobile Application",
-  },
-  {
-    id: "6",
-    title: "Teranga Palace",
-    description: "Site web vitrine pour l'hôtel Teranga Palace avec informations sur les chambres et réservation en ligne.",
-    mainImage: "teranga/terangaBanner.png",
-    images: [
-      "teranga/1.png",
-      "teranga/2.png",
-      "teranga/3.png",
-    ],
-    type: "web",
-    liveUrl: "https://dakar-dreams.vercel.app/",
-    technologies: ["TailwindCSS", "React", "Vercel"],
-    category: "Web Development",
-  },
-];
+import engagements from "../data/engagements";
+import type { Engagement } from "../data/engagements";
+import EngagementModal from "../component/ProjectModal";
 
 const fadeUpVariants: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -130,22 +33,22 @@ const fadeUpTransition: Transition = {
 
 export default function Portfolio() {
   const { theme } = useTheme();
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [selectedEngagement, setSelectedEngagement] = useState<Engagement | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleProjectClick = (project: Project) => {
-    setSelectedProject(project);
+  const handleEngagementClick = (engagement: Engagement) => {
+    setSelectedEngagement(engagement);
     setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
-    setTimeout(() => setSelectedProject(null), 300);
+    setTimeout(() => setSelectedEngagement(null), 300);
   };
 
   return (
-    <div className={`min-h-screen  transition-colors duration-300 ${theme === "dark" ? "bg-gray-900" : "bg-white"}`}>
-      <button onClick={() => window.open("https://wa.me/224626014552", "_blank")} className="bg-green-400 fixed bottom-4 right-4 p-2 rounded-2xl cursor-pointer shadow-3xl shadow-green-100 z-10"><BsWhatsapp color="white" size={30} /></button>
+    <div className={`min-h-screen transition-colors duration-300 ${theme === "dark" ? "bg-gray-900" : "bg-white"}`}>
+      <button onClick={() => window.open("https://wa.me/221776391186", "_blank")} className="bg-green-500 hover:bg-green-600 transition-colors fixed bottom-6 right-6 p-3 rounded-full cursor-pointer shadow-2xl text-white z-50 flex items-center justify-center" aria-label="Contacter sur WhatsApp"><BsWhatsapp color="white" size={28} /></button>
       <motion.div initial={{ opacity: 0, y: -16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}>
         <Header />
       </motion.div>
@@ -159,12 +62,12 @@ export default function Portfolio() {
       </motion.div>
 
       <motion.div variants={fadeUpVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={fadeUpTransition}>
-        <Services />
+        <Engagements />
       </motion.div>
 
-      <motion.div variants={fadeUpVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={fadeUpTransition}>
+      {/* <motion.div variants={fadeUpVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={fadeUpTransition}>
         <Skills />
-      </motion.div>
+      </motion.div> */}
 
       <motion.div variants={fadeUpVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={fadeUpTransition}>
         <Stats />
@@ -178,12 +81,12 @@ export default function Portfolio() {
         <Formation />
       </motion.div>
 
-      <motion.div variants={fadeUpVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={fadeUpTransition}>
+      {/* <motion.div variants={fadeUpVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={fadeUpTransition}>
         <Process />
-      </motion.div>
+      </motion.div> */}
 
       <motion.div variants={fadeUpVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={fadeUpTransition}>
-        <ProjectsSection projects={projects} onProjectClick={handleProjectClick} />
+        <EngagementsSection engagements={engagements} onEngagementClick={handleEngagementClick} />
       </motion.div>
 
       {/* Section Témoignages */}
@@ -203,7 +106,7 @@ export default function Portfolio() {
         <Footer />
       </motion.div>
 
-      <ProjectModal project={selectedProject} isOpen={isModalOpen} onClose={handleCloseModal} />
+      <EngagementModal engagement={selectedEngagement} isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
   );
 }

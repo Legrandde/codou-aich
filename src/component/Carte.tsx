@@ -1,6 +1,4 @@
-import { MdDeveloperBoard } from "react-icons/md";
-import { FaMobileAlt, FaServer } from "react-icons/fa";
-import { FaLightbulb } from "react-icons/fa";
+import { FaGraduationCap, FaHandsHelping, FaLaptopCode, FaFeatherAlt, FaFemale } from "react-icons/fa";
 import { useTheme } from "../contexts/ThemeContext";
 
 interface CarteProps {
@@ -9,10 +7,11 @@ interface CarteProps {
 }
 
 const icons: Record<string, React.ReactNode> = {
-    'Développement Web': <MdDeveloperBoard size={32} />,
-    'Développement Mobile': <FaMobileAlt size={32} />,
-    'Architecture & API': <FaServer size={32} />,
-    'Consulting Tech': <FaLightbulb size={32} />
+    'Éducation': <FaGraduationCap size={32} />,
+    'Inclusion': <FaHandsHelping size={32} />,
+    'EdTech': <FaLaptopCode size={32} />,
+    'Engagement citoyen': <FaFeatherAlt size={32} />,
+    'Droits des femmes': <FaFemale size={32} />
 };
 
 export default function Carte({ title, description }: CarteProps){
@@ -28,7 +27,7 @@ export default function Carte({ title, description }: CarteProps){
                 theme === 'dark' ? 'bg-amber-500/20' : 'bg-amber-50'
             }`}>
                 <div className="text-amber-500">
-                    {icons[title] || <MdDeveloperBoard size={32} />}
+                    {icons[title] || <FaGraduationCap size={32} />}
                 </div>
             </div>
             <h3 className={`text-xl font-bold mb-2 ${

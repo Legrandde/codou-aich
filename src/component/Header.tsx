@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BiMenu, BiPhone } from "react-icons/bi";
+import { BiMenu } from "react-icons/bi";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { useTheme } from "../contexts/ThemeContext";
@@ -19,28 +19,33 @@ export default function Header(){
                     <h1 className={`text-xl ${
                         theme === 'dark' ? 'text-white' : 'text-gray-900'
                     }`}>
-                        <span className="font-bold text-amber-500">Barry</span> Alhassane
+                        Codou Aïcha <span className="font-bold text-amber-500">Faye</span>
                     </h1>
-                    <div className="flex items-center justify-center gap-2 md:gap-12">
-                        <div className={`md:flex hidden items-center justify-center ${
+                    <div className="flex items-center justify-center gap-2 md:gap-8">
+                        <div className={`md:flex hidden items-center justify-center gap-1.5 ${
                             theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                         }`}>
                             <FaLocationDot className="text-amber-500"/>
-                            Timbi Madina
+                            Dakar, Sénégal
                         </div>
-                        <div className={`flex items-center justify-center ${
-                            theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
-                        }`}>
-                            <BiPhone className="text-amber-500" />
-                            +224 626014552
-                        </div>
-                        <button className={`p-2 hover:cursor-pointer hover:bg-amber-500 border border-amber-500 rounded transition-colors ${
-                            theme === 'dark' 
-                                ? 'bg-gray-800 text-white hover:text-white' 
-                                : 'bg-white text-gray-900'
-                        }`}>
+                        <a 
+                            href="tel:+221776391186"
+                            className={`md:flex hidden items-center justify-center gap-1.5 text-sm font-medium ${
+                                theme === 'dark' ? 'text-gray-300 hover:text-amber-400' : 'text-gray-700 hover:text-amber-600'
+                            }`}
+                        >
+                            +221 77 639 11 86
+                        </a>
+                        <a 
+                            href="#contact"
+                            className={`p-2 hover:cursor-pointer hover:bg-amber-500 hover:text-white border border-amber-500 rounded transition-colors ${
+                                theme === 'dark' 
+                                    ? 'bg-gray-800 text-white' 
+                                    : 'bg-white text-gray-900'
+                            }`}
+                        >
                             Contact
-                        </button>
+                        </a>
                         
                         {/* Theme Toggle */}
                         <button
@@ -68,7 +73,7 @@ export default function Header(){
                 <div className={`${menuDisplay? "flex flex-col": "hidden"} md:flex md:flex-row md:flex-wrap p-4 items-center justify-center gap-x-8 gap-y-2 md:w-[90%] lg:w-[75%] m-auto border-t ${
                     theme === 'dark' ? 'border-gray-800' : 'border-gray-200'
                 }`}>
-                    <div className="flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-4 md:gap-8">
+                    <div className="flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-4 md:gap-8 font-medium">
                         <a 
                             href="#accueil" 
                             className={`whitespace-nowrap hover:text-amber-500 transition-colors ${
@@ -86,20 +91,20 @@ export default function Header(){
                             À propos
                         </a>
                         <a 
-                            href="#services" 
+                            href="#engagements" 
                             className={`whitespace-nowrap hover:text-amber-500 transition-colors ${
                                 theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                             }`}
                         >
-                            Services
+                            Engagements
                         </a>
                         <a 
-                            href="#skills" 
+                            href="#stats" 
                             className={`whitespace-nowrap hover:text-amber-500 transition-colors ${
                                 theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                             }`}
                         >
-                            Compétences
+                            Impact
                         </a>
                         <a 
                             href="#parcours" 
@@ -116,14 +121,6 @@ export default function Header(){
                             }`}
                         >
                             Formation
-                        </a>
-                        <a 
-                            href="#projets" 
-                            className={`whitespace-nowrap hover:text-amber-500 transition-colors ${
-                                theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
-                            }`}
-                        >
-                            Projets
                         </a>
                         <a 
                             href="#contact" 

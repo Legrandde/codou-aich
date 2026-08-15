@@ -1,7 +1,6 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaEnvelope, FaPhone } from 'react-icons/fa';
 import { useTheme } from '../contexts/ThemeContext';
 import { FaLocationDot } from 'react-icons/fa6';
-import { PhoneCall } from 'lucide-react';
 
 export default function Footer() {
   const { theme } = useTheme();
@@ -22,56 +21,13 @@ export default function Footer() {
             <h3 className={`text-2xl font-bold mb-4 ${
               theme === 'dark' ? 'text-white' : 'text-gray-900'
             }`}>
-              <span className="text-amber-500">Barry</span> Alhassane
+              Codou Aïcha <span className="text-amber-500">Faye</span>
             </h3>
-            <p className={`mb-4 ${
+            <p className={`mb-4 text-sm leading-relaxed ${
               theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
             }`}>
-              Ingénieur informatique passionné par le développement web et mobile. 
-              Créateur de solutions innovantes et performantes.
+              Directrice d'Écoles au Sénégal. Une trajectoire au service de l’humain, de l’éducation et de l’inclusion. Une femme de convictions et d’engagement.
             </p>
-            {/* Social Links */}
-            <div className="flex gap-4">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`p-2 rounded-full transition-colors ${
-                  theme === 'dark'
-                    ? 'bg-gray-800 hover:bg-gray-700 text-white'
-                    : 'bg-white hover:bg-gray-200 text-gray-800'
-                }`}
-                aria-label="GitHub"
-              >
-                <FaGithub size={20} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/alhassane-barry-71116728b?lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging_conversation_detail%3B20Px4NFMRA6jLrwQ%2FI8uQQ%3D%3D"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`p-2 rounded-full transition-colors ${
-                  theme === 'dark'
-                    ? 'bg-gray-800 hover:bg-gray-700 text-white'
-                    : 'bg-white hover:bg-gray-200 text-gray-800'
-                }`}
-                aria-label="LinkedIn"
-              >
-                <FaLinkedin size={20} />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`p-2 rounded-full transition-colors ${
-                  theme === 'dark'
-                    ? 'bg-gray-800 hover:bg-gray-700 text-white'
-                    : 'bg-white hover:bg-gray-200 text-gray-800'
-                }`}
-                aria-label="Twitter"
-              >
-                <FaTwitter size={20} />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -79,9 +35,9 @@ export default function Footer() {
             <h4 className={`text-xl font-semibold mb-4 ${
               theme === 'dark' ? 'text-white' : 'text-gray-900'
             }`}>
-              Liens rapides
+              Navigation
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-sm">
               <li>
                 <a
                   href="#accueil"
@@ -104,22 +60,22 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#services"
+                  href="#engagements"
                   className={`hover:text-amber-500 transition-colors ${
                     theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
                   }`}
                 >
-                  Services
+                  Engagements
                 </a>
               </li>
               <li>
                 <a
-                  href="#skills"
+                  href="#stats"
                   className={`hover:text-amber-500 transition-colors ${
                     theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
                   }`}
                 >
-                  Compétences
+                  Impact
                 </a>
               </li>
               <li>
@@ -144,26 +100,6 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#projets"
-                  className={`hover:text-amber-500 transition-colors ${
-                    theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
-                  }`}
-                >
-                  Projets
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#testimonials"
-                  className={`hover:text-amber-500 transition-colors ${
-                    theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
-                  }`}
-                >
-                  Témoignages
-                </a>
-              </li>
-              <li>
-                <a
                   href="#contact"
                   className={`hover:text-amber-500 transition-colors ${
                     theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
@@ -180,25 +116,25 @@ export default function Footer() {
             <h4 className={`text-xl font-semibold mb-4 ${
               theme === 'dark' ? 'text-white' : 'text-gray-900'
             }`}>
-              Contact
+              Contact & Localisation
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-3">
-                <PhoneCall className="text-amber-500" />
-                <span className={theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}>
-                  +224 626 01 45 52
-                </span>
+                <FaPhone className="text-amber-500" />
+                <a href="tel:+221776391186" className={`hover:text-amber-500 transition-colors ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                  +221 77 639 11 86
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-amber-500" />
-                <span className={theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}>
-                  barryalhassane476@gmail.com
-                </span>
+                <a href="mailto:contact@ecolesausenegal.com" className={`hover:text-amber-500 transition-colors ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                  contact@ecolesausenegal.com
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <FaLocationDot className="text-amber-500" />
                 <span className={theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}>
-                  Timbi Madina
+                  Dakar, Sénégal
                 </span>
               </li>
             </ul>
@@ -213,12 +149,12 @@ export default function Footer() {
             <p className={`text-sm ${
               theme === 'dark' ? 'text-gray-500' : 'text-gray-600'
             }`}>
-              © {currentYear} Barry Alhassane. Tous droits réservés.
+              © {currentYear} Codou Aïcha Faye. Tous droits réservés.
             </p>
             <p className={`text-sm ${
               theme === 'dark' ? 'text-gray-500' : 'text-gray-600'
             }`}>
-              Développé avec passion
+              Au service de l’humain, de l’éducation et de l’inclusion
             </p>
           </div>
         </div>

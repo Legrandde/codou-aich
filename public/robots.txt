@@ -1,0 +1,5 @@
+# robots.txt pour Codou Aïcha Faye Portfolio
+User-agent: *
+Allow: /
+
+Sitemap: https://codouaichafaye.com/sitemap.xml

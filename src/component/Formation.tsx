@@ -12,24 +12,22 @@ interface Education {
 }
 
 const educations: Education[] = [
-  
-  {
-    id: '2',
-    degree: 'Licence en Géni Informatique en Cours ',
-    institution: 'Univers Professionnel de Dakar (Unipro)',
-    period: '2024 - 2026',
-    description: 'Formation complète en informatique avec focus sur la programmation et les systèmes d\'information et réseaux informatique.',
-    achievements: ['Mention Excellente']
-  },
   {
     id: '1',
-    degree: 'Baccalauréat Scientifique',
-    institution: 'Groupe Scolaire Tely Diallo',
-    period: '2022 - 2023',
-    description: 'Baccalauréat scientifique en Science expérimentale .',
-    achievements: ['Mention Assez Bien']
+    degree: 'Formation Scientifique',
+    institution: 'École Supérieure Polytechnique (ESP) de Dakar',
+    period: 'Diplôme Scientifique',
+    description: "Une formation scientifique rigoureuse ayant posé les fondations d'un parcours professionnel pluriel orienté vers l'innovation et les STEM.",
+    achievements: ['Projets scientifiques', 'Compétences analytiques & gestion']
+  },
+  {
+    id: '2',
+    degree: 'Spécialisation en Médiation',
+    institution: 'Dialogue Social & Règlement des Conflits',
+    period: 'Formation Supérieure',
+    description: "Compétences clés en médiation, négociation institutionnelle et résolution pacifique des différends au service du collectif.",
+    achievements: ['Médiation sociale', 'Gestion des relations de travail']
   }
-  
 ];
 
 export default function Formation() {

@@ -1,30 +1,18 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink, Play } from "lucide-react";
+import { X, ExternalLink } from "lucide-react";
 import { useTheme } from "../contexts/ThemeContext";
-export interface Project {
-  id: string;
-  title: string;
-  description: string;
-  mainImage: string;
-  images: string[];
-  type: 'web' | 'mobile' | 'desktop' | 'other';
-  liveUrl?: string;
-  demoUrl?: string;
-  technologies: string[];
-  category: string;
-}
- 
+import type { Engagement } from "../data/engagements";
 
-interface ProjectModalProps {
-  project: Project | null;
+interface EngagementModalProps {
+  engagement: Engagement | null;
   isOpen: boolean;
   onClose: () => void;
 }
 
-export default function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
+export default function EngagementModal({ engagement, isOpen, onClose }: EngagementModalProps) {
   const { theme } = useTheme();
 
-  if (!project) return null;
+  if (!engagement) return null;
 
   const isDark = theme === "dark";
 
@@ -53,18 +41,17 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
             className={`relative w-full max-w-5xl rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row ${
               isDark ? "bg-gray-900 text-white" : "bg-white text-gray-900"
             }`}
-            // Hauteur fixe — pas de scroll
             style={{ height: "min(88vh, 580px)" }}
           >
             {/* ── Colonne image (gauche) ──────────────────────────────────── */}
             <div className="relative w-full md:w-1/2 h-56 md:h-full flex-shrink-0">
               <img
-                src={project.mainImage}
-                alt={project.title}
+                src={engagement.mainImage}
+                alt={engagement.title}
                 className="w-full h-full object-cover"
               />
 
-              {/* Badge type */}
+              {/* Badge catégorie */}
               <span
                 className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest"
                 style={{
@@ -73,7 +60,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                   border: "1px solid rgba(245,158,11,0.4)",
                 }}
               >
-                {project.type}
+                {engagement.category}
               </span>
 
               {/* Gradient de transition vers le contenu (mobile) */}
@@ -102,14 +89,14 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                 <X size={18} />
               </button>
 
-              {/* Catégorie */}
+              {/* Partenaire ou catégorie */}
               <p className="text-xs uppercase tracking-widest text-amber-500 font-semibold mb-2">
-                {project.category}
+                {engagement.partenaire ?? engagement.category}
               </p>
 
               {/* Titre */}
               <h2 className="text-2xl md:text-3xl font-bold leading-tight mb-3">
-                {project.title}
+                {engagement.title}
               </h2>
 
               {/* Description */}
@@ -118,7 +105,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                   isDark ? "text-gray-400" : "text-gray-500"
                 }`}
               >
-                {project.description}
+                {engagement.description}
               </p>
 
               {/* Séparateur */}
@@ -126,40 +113,17 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                 className={`w-10 h-px mb-5 ${isDark ? "bg-white/10" : "bg-black/10"}`}
               />
 
-              {/* Technologies */}
-              <p
-                className={`text-xs uppercase tracking-widest font-semibold mb-2 ${
-                  isDark ? "text-gray-500" : "text-gray-400"
-                }`}
-              >
-                Stack
-              </p>
-              <div className="flex flex-wrap gap-2 mb-auto">
-                {project.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      isDark
-                        ? "bg-white/5 text-gray-300 border border-white/10"
-                        : "bg-gray-100 text-gray-600 border border-gray-200"
-                    }`}
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
               {/* Miniatures (max 3, visibles si place disponible) */}
-              {project.images.length > 0 && (
-                <div className="hidden md:flex gap-2 mt-5">
-                  {project.images.slice(0, 3).map((img, i) => (
+              {engagement.images.length > 0 && (
+                <div className="hidden md:flex gap-2 mt-auto">
+                  {engagement.images.slice(0, 3).map((img, i) => (
                     <div
                       key={i}
                       className="flex-1 rounded-lg overflow-hidden aspect-video"
                     >
                       <img
                         src={img}
-                        alt={`${project.title} capture ${i + 1}`}
+                        alt={`${engagement.title} capture ${i + 1}`}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       />
                     </div>
@@ -168,34 +132,24 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
               )}
 
               {/* Actions */}
-              <div className="flex gap-3 mt-5 pt-5 border-t border-dashed ${isDark ? 'border-white/10' : 'border-gray-200'}">
-                {project.type === "web" && project.liveUrl && (
+              {engagement.link && (
+                <div
+                  className={`flex gap-3 mt-5 pt-5 border-t border-dashed ${
+                    isDark ? "border-white/10" : "border-gray-200"
+                  }`}
+                >
+                  {/* ✅ Correction : ajout de la balise <a> */}
                   <a
-                    href={project.liveUrl}
+                    href={engagement.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-white text-sm font-semibold transition-colors"
                   >
                     <ExternalLink size={14} />
-                    Voir le site
+                    En savoir plus
                   </a>
-                )}
-                {project.demoUrl && (
-                  <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex items-center gap-2 px-5 py-2.5 rounded-xl border text-sm font-semibold transition-colors ${
-                      isDark
-                        ? "border-white/20 text-white hover:bg-white/5"
-                        : "border-gray-300 text-gray-700 hover:bg-gray-50"
-                    }`}
-                  >
-                    <Play size={14} />
-                    Démo
-                  </a>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           </motion.div>
         </motion.div>

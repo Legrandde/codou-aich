@@ -14,21 +14,44 @@ interface Experience {
 const experiences: Experience[] = [
   {
     id: '1',
-    title: 'Stagiére  maintenance et développement web',
-    company: 'Tout en Géni Informatique (TGI)',
-    period: 'Mars 2024 - Avril 2024',
-    description: 'Développement d\'applications avec  HTML,CSS, Javascript et Wordpresse. Programmation et maintenance du matériel informatique.',
-    technologies: ['HTML', 'Css', 'Javascript', 'Wordpress']
+    title: 'Cheffe de Projet',
+    company: 'CACSUP',
+    period: 'Début de carrière',
+    description: "Première expérience dans l'univers de l'éducation et de la formation, constituant l'un des premiers jalons d'un parcours naturellement orienté vers l'éducation numérique.",
+    technologies: ['Éducation', 'Formation', 'Gestion de projet']
   },
   {
     id: '2',
-    title: 'Stagiére  en Réseau informatique et multi médias',
-    company: 'Tout en Géni Informatique (TGI)',
-    period: 'Mai 2025 - Jui 2025',
-    description: 'Mise en place de server DHCP, Windows Server, mise en place d\'un réseau d\' entreprise.',
-    technologies: ['Rufus', 'DHCP', 'vmware Workstation 17']
+    title: 'Cadre & Conduite de Projets',
+    company: 'Orange Sénégal',
+    period: 'Plus de 10 ans d\'expérience',
+    description: "Consolidation des compétences professionnelles, sens élevé de l'organisation, du management d'équipes et de la conduite de grands projets au sein d'un groupe télécom majeur.",
+    technologies: ['Management', 'Organisation', 'Conduite de projet', 'Télécoms']
   },
-  
+  {
+    id: '3',
+    title: 'Cheffe de Protocole',
+    company: 'Ministère du Commerce, de l’Industrie et des PME',
+    period: 'Action Publique',
+    description: "Exercice des fonctions de cheffe de protocole au cœur de l'administration publique, renforçant la maîtrise des enjeux institutionnels et des affaires publiques.",
+    technologies: ['Protocole', 'Relations institutionnelles', 'Action Publique']
+  },
+  {
+    id: '4',
+    title: 'Directrice de l’antenne régionale de Dakar',
+    company: 'CROUS de l’Université du Sine Saloum',
+    period: 'Enseignement Supérieur',
+    description: "Responsabilité centrée sur l'accompagnement des étudiants, les enjeux de la jeunesse et les réalités de l'enseignement supérieur sénégalais.",
+    technologies: ['Enseignement Supérieur', 'Jeunesse', 'Direction Régionale']
+  },
+  {
+    id: '5',
+    title: 'Directrice & Pilote EdTech',
+    company: 'Écoles au Sénégal (EAS)',
+    period: 'Poste actuel',
+    description: "Direction de la plateforme éducative numérique (1,6M abonnés, 8 000+ ressources STEM). Déploiement du projet Tàggat Ma (Mastercard Foundation) et du programme EAS EdTech (Fellowship EtriLabs).",
+    technologies: ['EdTech', 'STEM', 'Tàggat Ma', 'Mastercard Foundation']
+  }
 ];
 
 export default function Parcours() {
@@ -69,16 +92,16 @@ export default function Parcours() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-sm font-semibold text-amber-500 uppercase tracking-wide">Expérience</span>
+          <span className="text-sm font-semibold text-amber-500 uppercase tracking-wide">Parcours</span>
           <h2 className={`text-4xl md:text-5xl font-bold mt-2 mb-4 ${
             theme === 'dark' ? 'text-white' : 'text-gray-900'
           }`}>
-            Mon parcours professionnel
+            Une trajectoire au service du collectif
           </h2>
           <p className={`text-lg max-w-2xl mx-auto ${
             theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
           }`}>
-            Des années d'expérience au service de l'innovation
+            De l’entreprise à l’action publique, puis de l’enseignement supérieur aux innovations EdTech et programmes d’inclusion.
           </p>
         </motion.div>
 
