@@ -127,8 +127,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-amber-500" />
-                <a href="mailto:contact@ecolesausenegal.com" className={`hover:text-amber-500 transition-colors ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                  contact@ecolesausenegal.com
+                <a href="mailto:codouaicha.faye@ecolesausenegal.org" className={`hover:text-amber-500 transition-colors ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                  codouaicha.faye@ecolesausenegal.org
                 </a>
               </li>
               <li className="flex items-center gap-3">

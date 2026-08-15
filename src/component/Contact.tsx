@@ -102,11 +102,11 @@ export default function Contact() {
                         </div>
                         <span className="font-medium">+221 77 639 11 86</span>
                     </a>
-                    <a href="mailto:contact@ecolesausenegal.com" className={`flex items-center gap-4 hover:text-amber-500 transition-colors ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
+                    <a href="mailto:codouaicha.faye@ecolesausenegal.org" className={`flex items-center gap-4 hover:text-amber-500 transition-colors ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
                         <div className="p-3 rounded-full bg-amber-500/20 text-amber-500">
                             <FaEnvelope size={20} />
                         </div>
-                        <span className="font-medium">contact@ecolesausenegal.com</span>
+                        <span className="font-medium">codouaicha.faye@ecolesausenegal.org</span>
                     </a>
                     <div className={`flex items-center gap-4 ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
                         <div className="p-3 rounded-full bg-amber-500/20 text-amber-500">
