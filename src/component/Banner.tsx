@@ -112,25 +112,30 @@ const domainIcons = [
                     Découvrir mes engagements
                 </motion.a>
 
-                <span className={`text-xl font-medium mb-1 ${
-                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
-                }`}>
+                <motion.span 
+                    variants={itemVariants}
+                    className={`text-xl font-medium mb-1 ${
+                        theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                    }`}
+                >
                     Bienvenue sur le site officiel de
-                </span>
-                <h1 
+                </motion.span>
+                <motion.h1 
+                    variants={itemVariants}
                     className={`md:text-5xl text-4xl font-black my-2 ${
                         theme === 'dark' ? 'text-white' : 'text-gray-900'
                     }`}
                 >
                     Codou Aïcha <span className="text-amber-500">Faye</span>
-                </h1>
-                <h2 
+                </motion.h1>
+                <motion.h2 
+                    variants={itemVariants}
                     className={`text-lg md:text-xl font-semibold mb-4 ${
                       theme === 'dark' ? 'text-amber-400' : 'text-amber-600'
                     }`}
                 >
                     Directrice d'Écoles au Sénégal | EdTech, Éducation & Inclusion
-                </h2>
+                </motion.h2>
                 <motion.p 
                     variants={itemVariants}
                     className={`text-base md:text-lg leading-relaxed ${
