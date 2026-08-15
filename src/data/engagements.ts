@@ -48,18 +48,7 @@ const engagements: Engagement[] = [
     category: "EdTech",
     partenaire: "Mastercard Foundation × EtriLabs",
   },
-  {
-    id: "4",
-    title: "Droits des Femmes & Plume Citoyenne",
-    description:
-      "Membre d'associations féminines et voix citoyenne engagée, plaidoyer pour des changements structurels, l'égalité des droits et la reconnaissance du travail des femmes. Prise de parole et écrits réguliers sur l'éducation, la santé, l'enfance et la justice sociale.",
-    mainImage: "codouAbout.jpg",
-    images: [
-      "codou.png",
-    ],
-    category: "Droits des femmes",
-    partenaire: "Engagement Associatif & Citoyen",
-  },
+  
 ];
 
 export default engagements;
