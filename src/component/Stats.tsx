@@ -29,14 +29,7 @@ const stats: Stat[] = [
     label: 'Ressources pédagogiques STEM & Scolaires',
     color: 'from-blue-500 to-blue-600'
   },
-  {
-    id: '3',
-    icon: <FaBriefcase size={36} />,
-    value: 10,
-    suffix: '+',
-    label: 'Années chez Orange & Leadership Institutionnel',
-    color: 'from-emerald-500 to-emerald-600'
-  },
+
   {
     id: '4',
     icon: <FaGraduationCap size={36} />,
@@ -127,7 +120,7 @@ export default function Stats() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {stats.map((stat) => (
             <motion.div
