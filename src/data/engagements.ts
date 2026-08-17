@@ -32,6 +32,7 @@ Le rapport recommande ainsi de poursuivre et d'étendre TAGGATMA afin de renforc
     images: ["codou/taggat-ma-1.jpeg", "codou/taggat-ma-2.jpeg"],
     category: "Inclusion",
     partenaire: "Mastercard Foundation",
+    link: "document(56)(1).pdf"
   },
   {
     id: "3",
