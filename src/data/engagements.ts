@@ -1,3 +1,4 @@
+
 export interface Engagement {
   id: string;
   title: string;
@@ -23,16 +24,12 @@ const engagements: Engagement[] = [
   {
     id: "2",
     title: "Tàggat Ma",
-    description: `Le projet TAGGATMA 2024-2025 vise à former et favoriser l'insertion professionnelle des jeunes issus des Daaras grâce au numérique.
-Déployé dans 8 Daaras, il propose plusieurs formations professionnelles adaptées aux réalités locales.
-Initialement prévu pour 625 jeunes, le projet a permis d'en former environ 1 500, dépassant largement son objectif.
-Malgré des difficultés techniques, pédagogiques et organisationnelles, le dispositif a obtenu des résultats significatifs.
-Le rapport recommande ainsi de poursuivre et d'étendre TAGGATMA afin de renforcer durablement la formation et l'insertion des jeunes.`,
+    description:
+      "Projet 2024-2025 de formation numérique pour l'insertion professionnelle des jeunes issus de 8 Daaras : objectif initial de 625 jeunes largement dépassé avec environ 1 500 bénéficiaires formés.",
     mainImage: "taggatma_premiere_page.png",
     images: ["codou/taggat-ma-1.jpeg", "codou/taggat-ma-2.jpeg"],
     category: "Inclusion",
     partenaire: "Mastercard Foundation",
-    link: "document(56)(1).pdf"
   },
   {
     id: "3",
