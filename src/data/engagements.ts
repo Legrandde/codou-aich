@@ -16,10 +16,7 @@ const engagements: Engagement[] = [
     description:
       "Plateforme éducative numérique majeure comptant 1 600 000 abonnés et plus de 8 000 ressources pédagogiques, couvrant l'ensemble du programme scolaire sénégalais de la CI à la Terminale, avec une orientation particulièrement forte vers les STEM.",
     mainImage: "eco1.jpeg",
-    images: [
-      "codou/eas-1.jpeg",
-      "codou/eas-2.jpeg",
-    ],
+    images: ["codou/eas-1.jpeg", "codou/eas-2.jpeg"],
     category: "Éducation",
     link: "https://ecolesausenegal.com",
   },
@@ -32,10 +29,7 @@ Initialement prévu pour 625 jeunes, le projet a permis d'en former environ 1 50
 Malgré des difficultés techniques, pédagogiques et organisationnelles, le dispositif a obtenu des résultats significatifs.
 Le rapport recommande ainsi de poursuivre et d'étendre TAGGATMA afin de renforcer durablement la formation et l'insertion des jeunes.`,
     mainImage: "taggatma_premiere_page.png",
-    images: [
-      "codou/taggat-ma-1.jpeg",
-      "codou/taggat-ma-2.jpeg",
-    ],
+    images: ["codou/taggat-ma-1.jpeg", "codou/taggat-ma-2.jpeg"],
     category: "Inclusion",
     partenaire: "Mastercard Foundation",
   },
@@ -45,9 +39,7 @@ Le rapport recommande ainsi de poursuivre et d'étendre TAGGATMA afin de renforc
     description:
       "Écoles au Sénégal a intégré la cohorte 3 du Mastercard Foundation EdTech Fellowship avec EtriLabs. Sélectionnée parmi 300 candidatures pour seulement 8 places, rejoignant ce programme prestigieux pour bâtir l'avenir de l'éducation en Afrique.",
     mainImage: "ed1.jpeg",
-    images: [
-      "ed.jpeg",
-    ],
+    images: ["ed.jpeg"],
     category: "EdTech",
     partenaire: "Mastercard Foundation × EtriLabs",
   },
